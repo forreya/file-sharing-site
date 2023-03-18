@@ -1,8 +1,10 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import connectDatabase from './config/database';
 
 dotenv.config()
+connectDatabase();
 
 const app = express();
 const PORT = process.env.PORT;
