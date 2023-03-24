@@ -1,10 +1,9 @@
 import express from 'express';
 import multer from 'multer';
-import { UploadApiResponse, v2 as cloudinary } from 'cloudinary'
+import { v2 as cloudinary } from 'cloudinary'
 import FileModel from '../models/File';
 
 const router = express.Router();
-
 
 const storage = multer.diskStorage({})
 
