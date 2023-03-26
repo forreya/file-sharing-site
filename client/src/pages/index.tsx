@@ -1,4 +1,5 @@
 import DropZone from "@components/DropZone";
+import RenderFile from "@components/RenderFile";
 import { useState } from "react";
 
 function Home() {
@@ -10,10 +11,13 @@ function Home() {
       <div className='w-96 flex flex-col items-center 
       bg-gray-800 shadow-xl rounded-xl justify-center' >
         <DropZone setFile={setFile}/>
-        {/* render file */}
-        {
-          file?.name
-        }
+        {file && (
+          <RenderFile file={{
+            format: file?.type.split('/')[1],
+            sizeInBytes: file?.size,
+            name: file?.name,
+          }}/>
+        )}
         {/* upload button */}
       </div>
     </div>
