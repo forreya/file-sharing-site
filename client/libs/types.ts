@@ -4,3 +4,7 @@ export interface IFile {
   format: string | undefined,
   id?: string | undefined,
 }
+
+export type DownloadFileProps = {
+  downloadPageLink: string;
+}
