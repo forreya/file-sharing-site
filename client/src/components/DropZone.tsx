@@ -19,8 +19,8 @@ const DropZone:FunctionComponent<{setFile:Dispatch<any>}> = ({setFile}) => {
   });
 
   return (
-    <div className='p-4 w-full'>
-      <div {...getRootProps()} className= "w-full h-80 rounded-md cursor-pointer focus:outline-none">
+    <div className='pt-3 pb-6 px-2 w-full '>
+      <div {...getRootProps()} className= "w-full h-80 rounded-md cursor-pointer focus:outline-none ">
         <input {...getInputProps()} />
 
         <div 
@@ -39,7 +39,7 @@ const DropZone:FunctionComponent<{setFile:Dispatch<any>}> = ({setFile}) => {
           { isDragReject ? <p>Sorry... only JPG, PNG and MP3 files are supported.</p>
           :
           <div>
-            <p>Drop your file here</p>
+            <p className='mt-2'>Drop your file here</p>
             <p className='mt-2 text-base text-gray-300'>
               Only JPG, PNG & MP3 files are supported.
             </p>

@@ -44,7 +44,7 @@ function Home() {
     <div className="flex flex-col justify-center items-center">
       <h1 className="my-4 text-3xl font-medium">Welcome to FilesToGo</h1>
       <div className='w-96 flex flex-col items-center 
-      bg-gray-800 shadow-xl rounded-xl justify-center' >
+      bg-gray-800 shadow-xl rounded-xl justify-center pt-3 px-3' >
         {!downloadPageLink && <DropZone setFile={setFile}/>}
         
         {file && (
@@ -57,7 +57,7 @@ function Home() {
 
         {!downloadPageLink && file && 
         <button 
-          className="bg-gray-900 p-2 my-5 rounded-md w-44 focus-outline-none"
+          className="button"
           onClick={handleUpload}
         >
           {uploadState}
@@ -68,7 +68,7 @@ function Home() {
             <DownloadFile downloadPageLink={downloadPageLink}/>
             {/* email form */}
             <button
-              className="bg-gray-900 p-2 my-5 rounded-md w-44 focus-outline-none"
+              className="button my-5"
               onClick={resetComponent}
             >
               Upload New File

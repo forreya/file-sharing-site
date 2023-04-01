@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .button {
+    @apply bg-gray-900 p-2 my-3 rounded-md w-44 focus:outline-none;
+  }
+}
