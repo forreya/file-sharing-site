@@ -46,4 +46,23 @@ router.post("/upload", upload.single('someFile'), async (req,res) => {
   }
 })
 
+router.get("/:id", async (req,res) => {
+  try {
+    const id = req.params.id
+    const file = await FileModel.findById(id)
+    if (!file) {
+      return res.status(404).json({message: "File doesn't exist."})
+    }
+    const {filename, sizeInBytes, format} = file
+    return res.status(200).json({
+      name: filename,
+      sizeInBytes,
+      format,
+      id,
+    })
+  } catch (error) {
+    return res.status(500).json({message: "Server error."})
+  }
+})
+
 export default router;
