@@ -1,5 +1,5 @@
 export interface IFile {
-  name: string | undefined,
+  name: string,
   sizeInBytes: number | undefined,
   format: string | undefined,
   id?: string | undefined,
