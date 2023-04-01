@@ -2,6 +2,7 @@ import express from 'express';
 import multer from 'multer';
 import { v2 as cloudinary } from 'cloudinary'
 import FileModel from '../models/File';
+import https from 'https'
 
 const router = express.Router();
 
@@ -60,6 +61,20 @@ router.get("/:id", async (req,res) => {
       format,
       id,
     })
+  } catch (error) {
+    return res.status(500).json({message: "Server error."})
+  }
+})
+
+router.get("/:id/download", async (req,res) => {
+  try {
+    const id = req.params.id
+    const file = await FileModel.findById(id)
+    if (!file) {
+      return res.status(404).json({message: "File doesn't exist."})
+    }
+    https.get(file.secureUrl, (fileStream) => fileStream.pipe(res))
+    
   } catch (error) {
     return res.status(500).json({message: "Server error."})
   }
