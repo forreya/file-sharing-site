@@ -2,7 +2,9 @@ import express from 'express';
 import multer from 'multer';
 import { v2 as cloudinary } from 'cloudinary'
 import FileModel from '../models/File';
-import https from 'https'
+import https from 'https';
+import nodemailer from 'nodemailer';
+import createEmailTemplate from '../utils/createEmailTemplate';
 
 const router = express.Router();
 
@@ -78,6 +80,42 @@ router.get("/:id/download", async (req,res) => {
   } catch (error) {
     return res.status(500).json({message: "Server error."})
   }
+})
+
+router.post('/email', async (req,res) => {
+  const {id, emailFrom, emailTo} = req.body;
+  if (!id || !emailFrom || !emailTo) {
+    return res.status(400).json({message: "Invalid data."})
+  }
+
+  const file = await FileModel.findById(id)
+  if (!file) {
+    return res.status(404).json({message: "File doesn't exist."})
+  }
+
+  let transporter = nodemailer.createTransport({
+    // @ts-ignore
+    host: process.env.SENDINBLUE_SMTP_HOST,
+    port: process.env.SENDINBLUE_SMTP_PORT,
+    secure: false,
+    auth: {
+      user: process.env.SENDINBLUE_SMTP_LOGIN,
+      pass: process.env.SENDINBLUE_SMTP_PASSWORD,
+    },
+  });
+
+  const {filename, sizeInBytes} = file;
+  const fileSize = `${(Number(sizeInBytes) / (1024 * 1024)).toFixed(2)} MB`;
+  const downloadPageLink = `${process.env.API_BASE_ENDPOINT_CLIENT}download/${id}`
+
+  const mailOptions = {
+    from: emailFrom,
+    to: emailTo,
+    subject: "File shared with you.",
+    text: `${emailFrom} shared a file with you.`,
+    html: createEmailTemplate(emailFrom,downloadPageLink,filename,sizeInBytes),
+  }
+
 })
 
 export default router;
