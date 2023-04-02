@@ -113,8 +113,20 @@ router.post('/email', async (req,res) => {
     to: emailTo,
     subject: "File shared with you.",
     text: `${emailFrom} shared a file with you.`,
-    html: createEmailTemplate(emailFrom,downloadPageLink,filename,sizeInBytes),
+    html: createEmailTemplate(emailFrom,downloadPageLink,filename,fileSize),
   }
+
+  let info = await transporter.sendMail(mailOptions, async (error, info) => {
+    if (error) {
+      console.log(error)
+      return res.status(500).json({message: 'Server error.'})
+    }
+    file.sender = emailFrom
+    file.receiver = emailTo
+
+    await file.save;
+    return res.status(200).json({message: "Email sent."})
+  })
 
 })
 

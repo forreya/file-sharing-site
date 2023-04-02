@@ -30,7 +30,7 @@ function Home() {
       setId(data.id)
       setUploadState("Uploaded")
     } catch (error: any) {
-      console.log(error.response.data)
+      console.log(error)
       setUploadState("Upload Failed")
     }
   }
