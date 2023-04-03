@@ -43,7 +43,7 @@ function Home() {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <h1 className="my-4 text-3xl font-medium">Welcome to FilesToGo</h1>
+      <h1 className="my-5 text-3xl font-medium">Welcome to FilesToGo</h1>
       <div className='w-96 flex flex-col items-center 
       bg-gray-800 shadow-xl rounded-xl justify-center pt-3 px-3' >
         {!downloadPageLink && <DropZone setFile={setFile}/>}
@@ -65,7 +65,7 @@ function Home() {
         </button>}
 
         {downloadPageLink && (
-          <div className="p-2 text-center">
+          <div className="p-2 text-center flex flex-col items-center justify-center w-full p-2 space-y-3">
             <DownloadFile downloadPageLink={downloadPageLink}/>
             <EmailForm id={id} />
             <button

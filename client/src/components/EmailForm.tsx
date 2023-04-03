@@ -8,23 +8,24 @@ const EmailForm:FunctionComponent<{
   const [message, setMessage] = useState(null)
 
   return (
-    <div>
-      <form className="" >
+    <div className="flex flex-col items-center justify-center w-full p-2 space-y-3">
+      <h3>You can also email your file.</h3>
+      <form className="flex flex-col items-center justify-center w-full p-2 space-y-3" >
         <input 
-          className="" 
+          className="p-1 text-white bg-gray-800 border-2 focus:outline-none" 
           type="email" 
           placeholder="Email From" 
           required 
           onChange={(event) => setEmailFrom(event.target.value)}
         />
         <input 
-          className="" 
+          className="p-1 text-white bg-gray-800 border-2 focus:outline-none" 
           type="email" 
           placeholder="Email To" 
           required
           onChange={(event) => setEmailTo(event.target.value)}
         />
-        <button className="">Email</button>
+        <button className="bg-gray-900 p-2 my-3 rounded-md w-44 focus:outline-none" type="submit">Email</button>
       </form>
     </div>
   )
