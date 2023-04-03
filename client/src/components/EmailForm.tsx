@@ -1,3 +1,4 @@
+import axios from "axios";
 import { FunctionComponent, useState } from "react";
 
 const EmailForm:FunctionComponent<{
@@ -7,8 +8,25 @@ const EmailForm:FunctionComponent<{
   const [emailTo, setEmailTo] = useState("")
   const [message, setMessage] = useState(null)
 
+  const handleSubmit = async () => {
+    try {
+      const {data} = await axios({
+        method: "POST",
+        url: "api/files/email",
+        data: {
+          id,
+          emailFrom,
+          emailTo,
+        }
+      })
+      setMessage(data.response)
+    } catch(error: any) {
+      setMessage(error.message)
+    }
+  }
+
   return (
-    <div className="flex flex-col items-center justify-center w-full p-2 space-y-3">
+    <div className="flex flex-col items-center justify-center w-full p-2 space-y-3" onSubmit={handleSubmit}>
       <h3>You can also email your file.</h3>
       <form className="flex flex-col items-center justify-center w-full p-2 space-y-3" >
         <input 
