@@ -1,12 +1,13 @@
 import DownloadFile from "@components/DownloadFile";
 import DropZone from "@components/DropZone";
+import EmailForm from "@components/EmailForm";
 import RenderFile from "@components/RenderFile";
 import axios from "axios";
 import { useState } from "react";
 
 function Home() {
   const [file, setFile] = useState<File | null>(null)
-  const [id, setId] = useState(null)
+  const [id, setId] = useState("")
   const [downloadPageLink, setDownloadPageLink] = useState(null)
   const [uploadState, setUploadState] = useState<"Uploading"|"Uploaded"|"Upload Failed"|"Upload">("Upload")
 
@@ -66,7 +67,7 @@ function Home() {
         {downloadPageLink && (
           <div className="p-2 text-center">
             <DownloadFile downloadPageLink={downloadPageLink}/>
-            {/* email form */}
+            <EmailForm id={id} />
             <button
               className="button my-5"
               onClick={resetComponent}
