@@ -3,7 +3,7 @@ import 'tailwindcss/tailwind.css'
 import type { AppProps } from 'next/app'
 import axios from 'axios'
 
-axios.defaults.baseURL = "http://localhost:4000/"
+axios.defaults.baseURL = process.env.NEXT_PUBLIC_BACKEND_BASEURL
 
 function App({ Component, pageProps }: AppProps) {
   return (
