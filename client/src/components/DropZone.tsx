@@ -17,6 +17,11 @@ const DropZone:FunctionComponent<{setFile:Dispatch<any>}> = ({setFile}) => {
       'audio/mpeg': ['.mpeg'],
       }
   });
+  
+  let borderColor;
+  if (isDragAccept) {borderColor = "border-green-500"}
+  else if (isDragReject) {borderColor = "border-green-500"}
+  else {borderColor = "border-yellow-light"}
 
   return (
     <div className='pt-3 pb-6 px-2 w-full '>
@@ -25,9 +30,7 @@ const DropZone:FunctionComponent<{setFile:Dispatch<any>}> = ({setFile}) => {
 
         <div 
           className={
-            "flex flex-col items-center justify-center border-2 border-dashed border-yellow-light rounded-xl h-full space-y-3 " +
-            (isDragReject ? "border-red-500 " : "") +
-            (isDragAccept ? "border-green-500 " : "")
+            `flex flex-col items-center justify-center text-center border-2 border-dashed ${borderColor} rounded-xl h-full space-y-3`
           }
         >
 
@@ -36,7 +39,12 @@ const DropZone:FunctionComponent<{setFile:Dispatch<any>}> = ({setFile}) => {
                className='h-16 w-16'>
           </img>
 
-          { isDragReject ? <p>Sorry... only JPG, PNG and MP3 files are supported.</p>
+          { isDragReject ? 
+            <div className='mt-10'>
+              <p>
+                Sorry... only JPG, PNG and MP3 files are supported.
+              </p>
+            </div>
           :
           <div>
             <p className='mt-2'>Drop your file here</p>
