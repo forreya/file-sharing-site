@@ -29,7 +29,7 @@ function Home() {
       })
       setDownloadPageLink(data.downloadPageLink)
       setId(data.id)
-      setUploadState("Uploaded")
+      setUploadState("Upload")
     } catch (error: any) {
       console.log(error)
       setUploadState("Upload Failed")

@@ -9,6 +9,7 @@ const EmailForm:FunctionComponent<{
   const [message, setMessage] = useState("")
 
   const handleSubmit = async (event: any) => {
+    setMessage("Email sending...")
     event.preventDefault()
     try {
       const {data} = await axios({
@@ -33,14 +34,14 @@ const EmailForm:FunctionComponent<{
         <input 
           className="p-1 text-white bg-gray-800 border-2 focus:outline-none" 
           type="email" 
-          placeholder="Email From" 
+          placeholder="Your Email" 
           required 
           onChange={(event) => setEmailFrom(event.target.value)}
         />
         <input 
           className="p-1 text-white bg-gray-800 border-2 focus:outline-none" 
           type="email" 
-          placeholder="Email To" 
+          placeholder="Recipient's Email" 
           required
           onChange={(event) => setEmailTo(event.target.value)}
         />
