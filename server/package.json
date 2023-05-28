@@ -28,6 +28,6 @@
     "@types/nodemailer": "^6.4.7",
     "ts-node-dev": "^2.0.0",
     "tsc": "^2.0.4",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.4"
   }
 }
