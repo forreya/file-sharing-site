@@ -65,7 +65,7 @@ function Home() {
         </button>}
 
         {downloadPageLink && (
-          <div className="p-2 text-center flex flex-col items-center justify-center w-full p-2 space-y-3">
+          <div className="text-center flex flex-col items-center justify-center w-full p-2 space-y-3">
             <DownloadFile downloadPageLink={downloadPageLink}/>
             <EmailForm id={id} />
             <button
