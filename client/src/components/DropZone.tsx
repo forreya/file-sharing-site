@@ -3,7 +3,6 @@ import { useDropzone } from 'react-dropzone'
 
 const DropZone:FunctionComponent<{setFile:Dispatch<any>}> = ({setFile}) => {
   const onDrop = useCallback((acceptedFiles: any) => {
-    console.log(acceptedFiles)
     setFile(acceptedFiles[0])
   },[])
 
