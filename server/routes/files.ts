@@ -24,7 +24,7 @@ router.post("/upload", upload.single('someFile'), async (req,res) => {
         resource_type: 'auto',
       })
     } catch (error: any) {
-      console.log(error.message)
+      console.log(error.error)
       return res.status(400).json({message: "Cloudinary Error."})
     }
 
@@ -44,7 +44,7 @@ router.post("/upload", upload.single('someFile'), async (req,res) => {
     });
 
   } catch (error: any) {
-    console.log(error.message);
+    console.log(error.error);
     res.status(500).json({message: 'Server error.'})
   }
 })
