@@ -19,7 +19,7 @@ const DropZone:FunctionComponent<{setFile:Dispatch<any>}> = ({setFile}) => {
   
   let borderColor;
   if (isDragAccept) {borderColor = "border-green-500"}
-  else if (isDragReject) {borderColor = "border-green-500"}
+  else if (isDragReject) {borderColor = "border-red-500"}
   else {borderColor = "border-yellow-light"}
 
   return (
