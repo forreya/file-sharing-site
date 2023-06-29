@@ -1,8 +1,27 @@
-# FilesToGo - File Sharing Site
+<p align="center"><img alt="logo" src="https://github.com/forreya/file-sharing-site/blob/main/logo.png" width="60px" /></p>
+<h1 align="center">FilesToGo - File Sharing Site</h1>
 
-FilesToGo is a web application built with TypeScript, Next.js, TailwindCSS and the MERN (MongoDB, Express, React, Node.js) stack. It allows users to upload files and generate download links to share with others.
+<p align="center">
+  <a href="#"><img alt="NextJS" src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"></a>
+  <a href="#"><img alt="CSS" src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white"></a>
+  <a href="#"><img alt="HTML" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"></a>
+  <a href="#"><img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"></a>
+  <a href="#"><img alt="Framer Motion" src="https://img.shields.io/badge/Framer-black?style=for-the-badge&logo=framer&logoColor=blue"></a>
+  <a href="#"><img alt="Markdown" src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white"></a>
+</p>
 
-## Features
+<h4 align="center">FilesToGo is a web application built with TypeScript, Next.js, TailwindCSS and the MERN (MongoDB, Express, React, Node.js) stack. It allows users to upload files and generate download links to share with others.</h4>
+
+---
+
+![DemoGif](https://github.com/forreya/file-sharing-site/blob/main/demo.gif)
+
+---
+
+## 🕹️ Features
+
+Here's an overview of the key functionalities of this website:
+
 - **Drag and drop file upload**: Users can drag and drop their files to upload them to the site.
 - **File metadata display**: File name & size is displayed on the site.
 - **Generate unique download link for each uploaded file**: After uploading files, users can generate a unique download link for each file to share with others.
@@ -10,22 +29,53 @@ FilesToGo is a web application built with TypeScript, Next.js, TailwindCSS and t
 - **Cloud storage integration with Cloudinary**: Files stored on Cloudinary for cloud storage.
 - **Emailing file download links through Sendinblue**: Users can also send an email with the download link to someone else using Sendinblue.
 
-## Usage
-_Side note: To store files on Cloudinary, fill in the Cloudinary credentials in the .env file._
+---
 
-1. Navigate to the homepage at http://localhost:3000.
-2. Drag and drop a file to upload them to the site.
-3. After uploading the file, a unique download link will be generated to share with others.
-4. Navigate to the download link to download the file.
-5. To email a file download link through Sendinblue, fill in the Sendinblue credentials in the .env file and use the email form on the site.
+## 🖲️ Usage
 
-## Prerequisites
+1. Drag and drop a file to upload it to the site.
+2. After uploading the file, a unique download link will be generated to share with others.
+3. Navigate to the download link and share it with whomever you wish.
+4. Alternatively, to email a file download link to your friends, fill in the email form and your recipient will receive your file in no time!
+
+---
+
+## 💾 Installation
+
+### Prerequisites
 - Node.js: You must have Node.js installed on your machine. If you do not have it installed, you can download it [here](https://nodejs.org/en/download/).
 - MongoDB: You need a MongoDB cluster to store the data of the uploaded files. If you don't have a MongoDB account- create one [here](https://account.mongodb.com/account/register).
 - Cloudinary account: You must have a Cloudinary account to use the cloud storage integration. You can create an account for free [here](https://cloudinary.com/users/register/free).
 
-## Installation
-1. Clone the repository: `git clone https://github.com/forreya/file-sharing-site.git`
-2. Install dependencies (frontend & backend): `npm install`
+1. Clone Repository
+
+```
+git clone https://github.com/forreya/file-sharing-site.git
+```
+
+2. Install Dependencies
+
+```
+npm install 
+```
+
 3. Create a `.env` file in the root directory of the server folder and fill in the environmental variables with your specific information (refer to `.env.example`)
-4. Start the client & server: `npm run dev`
+    
+4. Run the Client & Server
+
+```
+npm run dev
+```
+
+This will install the necessary packages listed in the package.json file and run the application on your computer.
+
+---
+
+## 💻 Technologies
+
+- [ReactJS](https://reactjs.org/)
+- [NextJS](https://nextjs.org/)
+- [JavaScript](https://www.javascript.com/)
+- [HTML](https://html.spec.whatwg.org/multipage/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [CSS](https://devdocs.io/css/)
