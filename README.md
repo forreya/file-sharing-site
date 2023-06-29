@@ -42,7 +42,7 @@ Here's an overview of the key functionalities of this website:
 
 ## 💾 Installation
 
-_Note: For step 3, you need to fill in the details for both the client side (.env.local) and the server side (.env). Refer to the .env.example files_
+_Note: For step 3, you need to fill in the details for both the client side (.env.local) and the server side (.env). Refer to the .env.example files for help._
 
 1. Clone Repository
 
