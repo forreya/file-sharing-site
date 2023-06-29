@@ -50,13 +50,20 @@ git clone https://github.com/forreya/file-sharing-site.git
 
 2. Install Dependencies
 
+_Note: For step 3, you need to fill in the details for both the client (.env.local) and the server (.env)_
+
 ```
 npm install 
 ```
 
 3. Create `.env` & `.env.local` files and fill in the environmental variables with your own information (refer to `.env.example`)
 
-_Note: You need to fill in the details for both the client (.env.local) and the server (.env)_
+```
+PORT = '4000'
+MONGO_USER = 'fa_mulan'
+MONGO_PASSWORD = 'iuew32bv4uibvr'
+MONGO_URI = 'mongodb+srv://fa_mulan:beOUEinehyUIPS@my-cluster.erirwk.mongodb.net'
+```
     
 4. Run the Client & Server
 
