@@ -1,4 +1,4 @@
-<p align="center"><img alt="logo" src="https://github.com/forreya/file-sharing-site/blob/main/logo.png" width="60px" /></p>
+<p align="center"><img alt="logo" src="https://github.com/forreya/file-sharing-site/blob/main/logo.jpeg" width="60px" /></p>
 <h1 align="center">FilesToGo - File Sharing Site</h1>
 
 <p align="center">
