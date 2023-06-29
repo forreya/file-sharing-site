@@ -31,7 +31,7 @@ Here's an overview of the key functionalities of this website:
 
 ---
 
-## 🖲️ Usage
+## 📁 Usage
 
 1. Drag and drop a file to upload it to the site.
 2. After uploading the file, a unique download link will be generated to share with others.
@@ -41,11 +41,6 @@ Here's an overview of the key functionalities of this website:
 ---
 
 ## 💾 Installation
-
-### Prerequisites
-- Node.js: You must have Node.js installed on your machine. If you do not have it installed, you can download it [here](https://nodejs.org/en/download/).
-- MongoDB: You need a MongoDB cluster to store the data of the uploaded files. If you don't have a MongoDB account- create one [here](https://account.mongodb.com/account/register).
-- Cloudinary account: You must have a Cloudinary account to use the cloud storage integration. You can create an account for free [here](https://cloudinary.com/users/register/free).
 
 1. Clone Repository
 
@@ -59,7 +54,9 @@ git clone https://github.com/forreya/file-sharing-site.git
 npm install 
 ```
 
-3. Create a `.env` file in the root directory of the server folder and fill in the environmental variables with your specific information (refer to `.env.example`)
+3. Create `.env` & `.env.local` files and fill in the environmental variables with your own information (refer to `.env.example`)
+
+_Note: You need to fill in the details for both the client (.env.local) and the server (.env)_
     
 4. Run the Client & Server
 
