@@ -24,10 +24,10 @@ Here's an overview of the key functionalities of this website:
 
 - **Drag and drop file upload**: Users can drag and drop their files to upload them to the site.
 - **File metadata display**: File name & size is displayed on the site.
-- **Generate unique download link for each uploaded file**: After uploading files, users can generate a unique download link for each file to share with others.
-- **Download files with a link**: Users can download the files they uploaded or files shared with them by clicking on the download link.
+- **Generate unique download link for each uploaded file**: A unique download link is generated for each file.
+- **Download files with a link**: Users can download the files they uploaded or files shared with them.
 - **Cloud storage integration with Cloudinary**: Files stored on Cloudinary for cloud storage.
-- **Emailing file download links through Sendinblue**: Users can also send an email with the download link to someone else using Sendinblue.
+- **Emailing file download links through Sendinblue**: Users can send an email with the download link to someone else.
 
 ---
 
@@ -42,6 +42,8 @@ Here's an overview of the key functionalities of this website:
 
 ## 💾 Installation
 
+_Note: For step 3, you need to fill in the details for both the client side (.env.local) and the server side (.env). Refer to the .env.example files_
+
 1. Clone Repository
 
 ```
@@ -50,13 +52,11 @@ git clone https://github.com/forreya/file-sharing-site.git
 
 2. Install Dependencies
 
-_Note: For step 3, you need to fill in the details for both the client (.env.local) and the server (.env)_
-
 ```
 npm install 
 ```
 
-3. Create `.env` & `.env.local` files and fill in the environmental variables with your own information (refer to `.env.example`)
+3. Create `.env` & `.env.local` files and fill the environmental variables in with your own information
 
 ```
 PORT = '4000'
