@@ -62,7 +62,7 @@ npm install
 PORT = '4000'
 MONGO_USER = 'fa_mulan'
 MONGO_PASSWORD = 'iuew32bv4uibvr'
-MONGO_URI = 'mongodb+srv://fa_mulan:beUdgfvwfIAyPS@my-cluster.erirwk.mongodb.net'
+MONGO_URI = 'mongodb+srv://fa_mulan:beUdgfvwfIAyPS@my-cluster.qxyk.mongodb.net'
 ```
     
 4. Start Client & Server
