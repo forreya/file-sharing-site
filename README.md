@@ -36,7 +36,7 @@ Here's an overview of the key functionalities of this website:
 1. Drag and drop a file to upload it to the site.
 2. After uploading the file, a unique download link will be generated to share with others.
 3. Navigate to the download link and share it with whomever you wish.
-4. Alternatively, to email a file download link to your friends, fill in the email form and your recipient will receive your file in no time!
+4. Alternatively, to email a file download-link to your friends, fill in the email form and your friend will receive the file in no time!
 
 ---
 
