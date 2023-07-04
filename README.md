@@ -65,7 +65,7 @@ MONGO_PASSWORD = 'iuew32bv4uibvr'
 MONGO_URI = 'mongodb+srv://fa_mulan:beOUEinehyUIPS@my-cluster.erirwk.mongodb.net'
 ```
     
-4. Run the Client & Server
+4. Start Client & Server
 
 ```
 npm run dev
