@@ -10,7 +10,7 @@
   <a href="#"><img alt="TailwindCSS" src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"></a>
 </p>
 
-<h4 align="center">FilesToGo is a web application built with TypeScript, Next.js, TailwindCSS and the MERN (MongoDB, Express, React, Node.js) stack. It allows users to upload files and generate download links to share with others.</h4>
+<h4 align="center">FilesToGo is a dynamic website that provides users with a simple and efficient way to upload files through drag and drop, view file metadata, and generate unique download links. It also allows users to download files using the provided links and conveniently share them via email.</h4>
 
 ---
 
