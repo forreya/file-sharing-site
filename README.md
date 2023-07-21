@@ -22,12 +22,12 @@
 
 Here's an overview of the key functionalities of this website:
 
-- **Drag and drop file upload**: Users can drag and drop their files to upload them to the site.
-- **File metadata display**: File name & size is displayed on the site.
-- **Generate unique download link for each uploaded file**: A unique download link is generated for each file.
-- **Download files with a link**: Users can download the files they uploaded or files shared with them.
-- **Cloud storage integration with Cloudinary**: Files stored on Cloudinary for cloud storage.
-- **Emailing file download links through Sendinblue**: Users can send an email with the download link to someone else.
+* **Drag and drop file upload**: Users can drag and drop their files to upload them to the site.
+* **File metadata display**: File name & size is displayed on the site.
+* **Generate unique download link for each uploaded file**: A unique download link is generated for each file.
+* **Download files with a link**: Users can download the files they uploaded or files shared with them.
+* **Cloud storage integration with Cloudinary**: Files stored on Cloudinary for cloud storage.
+* **Emailing file download links through Sendinblue**: Users can send an email with the download link to someone else.
 
 ---
 
